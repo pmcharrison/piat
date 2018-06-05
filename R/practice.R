@@ -1,5 +1,5 @@
 practice <- function(media_dir) {
-  lapply(
+  unlist(lapply(
     list(list(id = "Prac_Trial_Lvl1",
               answer = "Match"),
          list(id = "Prac_Trial_Lvl2",
@@ -19,8 +19,7 @@ practice <- function(media_dir) {
           psychTest::one_button_page(
             if (answer == x$answer) "You answered correctly!" else
               "You answered incorrectly."
-          )}))}) %>%
-    unlist
+          )}))}))
 }
 
 repeatable_practice <- function(media_dir) {
@@ -29,7 +28,7 @@ repeatable_practice <- function(media_dir) {
       psychTest::set_local("do_practice", TRUE, state)
     }),
     psychTest::loop_while(
-      test = function(state, ...) psychTest::get_global("do_practice", state),
+      test = function(state, ...) psychTest::get_local("do_practice", state),
       logic = c(
         practice(media_dir),
         psychTest::NAFC_page(
@@ -39,7 +38,7 @@ repeatable_practice <- function(media_dir) {
           save_answer = FALSE,
           arrange_vertically = FALSE,
           on_complete = function(state, answer, ...) {
-            psychTest::set_local("do_practice", identical(answer, "Yes"), state)
+            psychTest::set_local("do_practice", identical(answer, "No"), state)
           }
         )
       )))}
