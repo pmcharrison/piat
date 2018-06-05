@@ -6,7 +6,7 @@ intro <- function(media_dir) {
       label = "example_context",
       prompt = "Here is an example context:",
       choices = "Next",
-      url = file.path(media_dir, "training/Scale_C_ton.mp4"),
+      url = file.path(media_dir, "Scale_C_ton.mp4"),
       save_answer = FALSE
     ),
     psychTest::one_button_page("A variable number of up and/or down arrows will then appear in a sequence, with a corresponding tone, that is stepping up or down the scale. Press 'Next' for an example of these arrows appearing after the ascending scale and start note."),
@@ -14,7 +14,7 @@ intro <- function(media_dir) {
       label = "example_arrows",
       prompt = "Here is an example of arrows appearing after the ascending scale and start note:",
       choices = "Next",
-      url = file.path(media_dir, "training/Example_Trial_sounded_arr.mp4"),
+      url = file.path(media_dir, "Example_Trial_sounded_arr.mp4"),
       save_answer = FALSE
     ),
     psychTest::one_button_page(
@@ -24,7 +24,7 @@ intro <- function(media_dir) {
       label = "example_silent_arrow",
       prompt = "Here is an example:",
       choices = "Next",
-      url = file.path(media_dir, "training/Example_Trial_all_arr.mp4"),
+      url = file.path(media_dir, "Example_Trial_all_arr.mp4"),
       save_answer = FALSE
     ),
     psychTest::one_button_page(
@@ -34,7 +34,7 @@ intro <- function(media_dir) {
       label = "example_complete_trial",
       prompt = "Here is an example complete trial:",
       choices = c("Match", "No match"),
-      url = file.path(media_dir, "training/Example_Trial_complete.mp4")
+      url = file.path(media_dir, "Example_Trial_complete.mp4")
     ),
     psychTest::one_button_page("We encourage you to just use your imagery to play the missing notes in your head, and don’t hum or move as you imagine. From earlier tests we know that using only your imagery gives the best results on the test."),
     psychTest::one_button_page("There are 3 practice trials in which you will receive feedback. You are free to attempt these as many times as you wish to familiarise yourself with the task.")
