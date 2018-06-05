@@ -39,7 +39,7 @@ repeatable_practice <- function(media_dir) {
           save_answer = FALSE,
           arrange_vertically = FALSE,
           on_complete = function(state, answer, ...) {
-            psychTest::set_local("do_practice", identical(answer, "Yes"))
+            psychTest::set_local("do_practice", identical(answer, "Yes"), state)
           }
         )
       )))}
