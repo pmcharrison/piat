@@ -4,6 +4,7 @@ piat.options <- function() {
     next_item.estimator = "WL",
     # next_item.prior_dist = "norm",
     # next_item.prior_par = c(0, 2),
-    final_ability.estimator = "WL"
+    final_ability.estimator = "WL",
+    constrain_answers = TRUE
   )
 }
