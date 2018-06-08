@@ -1,5 +1,5 @@
 #' @export
-piat <- function(num_items = 10L,
+piat <- function(num_items = 25L,
                  take_training = TRUE,
                  label = "PIAT",
                  feedback = piat.feedback.no_score(),
