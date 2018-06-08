@@ -18,7 +18,8 @@ show_item <- function(media_dir) {
       prompt = get_prompt(item_number, num_items_in_test),
       choices = get_choices(),
       url = get_item_path(item, media_dir),
-      admin_ui = get_admin_ui(item, media_dir)
+      admin_ui = get_admin_ui(item, media_dir),
+      save_answer = FALSE
     )
   }
 }
