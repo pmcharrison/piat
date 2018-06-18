@@ -9,7 +9,7 @@ main_test <- function(label, media_dir, num_items) {
 }
 
 show_item <- function(media_dir) {
-  function(item) {
+  function(item, ...) {
     stopifnot(is(item, "item"), nrow(item) == 1L)
     item_number <- psychTestCAT::get_item_number(item)
     num_items_in_test <- psychTestCAT::get_num_items_in_test(item)
