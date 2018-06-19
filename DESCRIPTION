@@ -7,7 +7,7 @@ Depends: R (>= 3.4.0)
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Imports: psychTest, psychTestCAT
+Imports: psychTestR, psychTestRCAT
 Suggests: testthat
 RoxygenNote: 6.0.1
-Remotes: pmcharrison/psychTestCAT
+Remotes: pmcharrison/psychTestRCAT

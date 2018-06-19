@@ -1,9 +1,9 @@
 main_test <- function(label, media_dir, num_items) {
-  psychTestCAT::adapt_test(
+  psychTestRCAT::adapt_test(
     label = label,
     item_bank = get_item_bank(),
     show_item = show_item(media_dir),
-    stopping_rule = psychTestCAT::stopping_rule.num_items(n = num_items),
+    stopping_rule = psychTestRCAT::stopping_rule.num_items(n = num_items),
     opt = piat.options()
   )
 }
@@ -11,9 +11,9 @@ main_test <- function(label, media_dir, num_items) {
 show_item <- function(media_dir) {
   function(item, ...) {
     stopifnot(is(item, "item"), nrow(item) == 1L)
-    item_number <- psychTestCAT::get_item_number(item)
-    num_items_in_test <- psychTestCAT::get_num_items_in_test(item)
-    psychTest::video_NAFC_page(
+    item_number <- psychTestRCAT::get_item_number(item)
+    num_items_in_test <- psychTestRCAT::get_num_items_in_test(item)
+    psychTestR::video_NAFC_page(
       label = paste0("q", item_number),
       prompt = get_prompt(item_number, num_items_in_test),
       choices = get_choices(),

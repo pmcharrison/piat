@@ -1,5 +1,5 @@
 piat.options <- function() {
-  psychTestCAT::adapt_test_options(
+  psychTestRCAT::adapt_test_options(
     next_item.criterion = "bOpt",
     next_item.estimator = "WL",
     # next_item.prior_dist = "norm",
