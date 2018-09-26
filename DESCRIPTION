@@ -1,6 +1,6 @@
 Package: piat
 Title: R implementation of the Pitch Imagery Arrow Test
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: person("Peter", "Harrison", email = "pmc.harrison@gmail.com", role = c("aut", "cre"))
 Description: R implementation of the Pitch Imagery Arrow Test
 Depends: R (>= 3.4.0)
@@ -8,8 +8,8 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    psychTestR (>= 2.0.0),
-    psychTestRCAT (>= 1.0.2)
+    psychTestR (>= 2.0.2),
+    psychTestRCAT (>= 1.1.0)
 Suggests: 
     testthat (>= 2.0.0)
 RoxygenNote: 6.1.0
