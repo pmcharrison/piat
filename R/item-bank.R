@@ -1,3 +1,7 @@
+#' Item bank
+#'
+#' Returns the PIAT item bank as a data frame.
+#'
 #' @export
 get_item_bank <- function() {
   x <- read.csv(system.file("item-bank.csv", package = "piat",
