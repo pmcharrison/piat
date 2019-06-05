@@ -1,8 +1,7 @@
 # Pitch Imagery Arrow Test (PIAT)
 
 The MDT is an adaptive test of pitch imagery abilities.
-
-We invite you to try the test [here](http://shiny.pmcharrison.com/piat-demo)
+We invite you to try the test [here](http://shiny.pmcharrison.com/piat-demo).
 
 ## Citation
 
