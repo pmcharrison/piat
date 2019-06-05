@@ -1,3 +1,5 @@
+# piat 0.2.0
+
 * Increasing default demo number of items to 10
 
 # piat 0.1.1
