@@ -1,6 +1,8 @@
 # Pitch Imagery Arrow Test (PIAT)
 
-Work in progress - contact us if you are interested in using the PIAT in a study!
+Work in progress - contact us if you are interested in using the PIAT in a study.
+
+You can try the [online demo](http://shiny.pmcharrison.com/piat-demo) here!
 
 ## Installation instructions (local use)
 
