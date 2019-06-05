@@ -1,5 +1,7 @@
 # Pitch Imagery Arrow Test (PIAT)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3239098.svg)](https://doi.org/10.5281/zenodo.3239098)
+
 The MDT is an adaptive test of pitch imagery abilities.
 We invite you to try the test [here](http://shiny.pmcharrison.com/piat-demo).
 
@@ -9,7 +11,7 @@ When using the PIAT in your own research, you can cite this implementation:
 
 > Harrison, P. M. C. (2018). 
 Pitch Imagery Ability Test (PIAT), psychTestR implementation. Zenodo.
-https://doi.org/10.5281/zenodo.todo
+https://doi.org/10.5281/zenodo.3239098
 
 We also advise mentioning the software versions you used,
 in particular the versions of the `piat`, `psychTestR`, and `psychTestRCAT` packages.
