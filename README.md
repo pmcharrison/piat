@@ -8,7 +8,7 @@ We invite you to try the test [here](http://shiny.pmcharrison.com/piat-demo).
 When using the PIAT in your own research, you can cite this implementation:
 
 > Harrison, P. M. C. (2018). 
-Pitch Imagery Ability Test (MDT), psychTestR implementation. Zenodo.
+Pitch Imagery Ability Test (PIAT), psychTestR implementation. Zenodo.
 https://doi.org/10.5281/zenodo.todo
 
 We also advise mentioning the software versions you used,
