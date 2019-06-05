@@ -7,7 +7,8 @@ We invite you to try the test [here](http://shiny.pmcharrison.com/piat-demo).
 
 ## Citation
 
-When using the PIAT in your own research, you can cite this implementation:
+We are currently preparing an introductory publication for the PIAT.
+In the meanwhile, when using the PIAT in your own research, you can cite this implementation:
 
 > Harrison, P. M. C. (2018). 
 Pitch Imagery Ability Test (PIAT), psychTestR implementation. Zenodo.
