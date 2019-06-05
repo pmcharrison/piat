@@ -1,8 +1,29 @@
 # Pitch Imagery Arrow Test (PIAT)
 
-Work in progress - contact us if you are interested in using the PIAT in a study.
+The MDT is an adaptive test of pitch imagery abilities.
 
-You can try the [online demo](http://shiny.pmcharrison.com/piat-demo) here!
+We invite you to try the test [here](http://shiny.pmcharrison.com/piat-demo)
+
+## Citation
+
+When using the PIAT in your own research, you can cite this implementation:
+
+> Harrison, P. M. C. (2018). 
+Pitch Imagery Ability Test (MDT), psychTestR implementation. Zenodo.
+https://doi.org/10.5281/zenodo.todo
+
+We also advise mentioning the software versions you used,
+in particular the versions of the `piat`, `psychTestR`, and `psychTestRCAT` packages.
+You can find these version numbers from R by running the following commands:
+
+``` r
+library(piat)
+library(psychTestR)
+library(psychTestRCAT)
+if (!require(devtools)) install.packages("devtools")
+x <- devtools::session_info()
+x$packages[x$packages$package %in% c("piat", "psychTestR", "psychTestRCAT"), ]
+```
 
 ## Installation instructions (local use)
 
@@ -35,3 +56,104 @@ demo_piat()
 # Run a demo test, skipping the training phase, and only asking 5 questions
 demo_piat(num_items = 5, take_training = FALSE)
 ```
+
+### Testing a participant
+
+The `standalone_piat()` function is designed for real data collection.
+In particular, the participant doesn't receive feedback during this version.
+
+``` r
+# Load the piat package
+library(piat)
+
+# Run the test as if for a participant, using default settings,
+# saving data, and with a custom admin password
+standalone_piat(admin_password = "put-your-password-here")
+```
+
+You will need to enter a participant ID for each participant.
+This will be stored along with their results.
+
+Each time you test a new participant,
+rerun the `standalone_piat()` function,
+and a new participation session will begin.
+
+You can retrieve your data by starting up a participation session,
+entering the admin panel using your admin password,
+and downloading your data.
+For more details on the psychTestR interface, 
+see http://psychtestr.com/.
+
+### Results
+
+The main output from the PIAT is an `ability` score,
+corresponding to the ability estimate for the participant.
+It is computed from the underlying item response model and ranges approximately from -4 to +4.
+A secondary output is an `ability_sem` score, 
+corresponding to the standard error of measurement for the ability estimate;
+again, it is computed from the underlying IRT model.
+For most applications you would only use the `ability` value,
+unless using a statistical analysis technique that allows you to specify measurement error explicitly.
+For more information about item response theory, see the [Wikipedia](https://en.wikipedia.org/wiki/Item_response_theory) article.
+
+psychTestR provides several ways of retrieving test results (see http://psychtestr.com/).
+Most are accessed through the test's admin panel.
+
+* If you are just interested in the participants' final scores,
+the easiest solution is usually to download the results in CSV format from the admin panel.
+* If you are interested in trial-by-trial results, you can run the command
+`compile_trial_by_trial_results()` from the R console
+(having loaded the MDT package using `library(piat)`).
+Type `?compile_trial_by_trial_results()` for more details.
+* If you want still more detail, you can examine the individual RDS output files using `readRDS()`. 
+Detailed results are stored as the 'metadata' attribute for the ability field. 
+You can access it something like this: 
+
+``` r
+x <- readRDS("output/results/id=1&p_id=test&save_id=1&pilot=false&complete=true.rds")
+attr(x$PIAT$ability, "metadata")
+```
+
+## Installation instructions (Shiny Server)
+
+1. Complete the installation instructions described under 'Local use'.
+2. If not already installed, install Shiny Server Open Source:
+https://www.rstudio.com/products/shiny/download-server/
+3. Navigate to the Shiny Server app directory.
+
+`cd /srv/shiny-server`
+
+4. Make a folder to contain your new Shiny app.
+The name of this folder will correspond to the URL.
+
+`sudo mkdir piat`
+
+5. Make a text file in this folder called `app.R`
+specifying the R code to run the app.
+
+- To open the text editor: `sudo nano piat/app.R`
+- Write the following in the text file:
+
+``` r
+library(piat)
+standalone_piat(admin_password = "put-your-password-here")
+```
+
+- Save the file (CTRL-O).
+
+6. Change the permissions of your app directory so that `psychTestR`
+can write its temporary files there.
+
+`sudo chown -R shiny piat`
+
+where `shiny` is the username for the Shiny process user
+(this is the usual default).
+
+7. Navigate to your new shiny app, with a URL that looks like this:
+http://my-web-page.org:3838/piat
+
+## Usage notes
+
+- The PIAT runs in your web browser.
+- By default, audio files are hosted online on our servers.
+The test therefore requires internet connectivity.
