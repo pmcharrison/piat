@@ -1,18 +1,17 @@
-# Pitch Imagery Arrow Test (PIAT)
+# Adaptive Pitch Imagery Arrow Test (aPIAT)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3239098.svg)](https://doi.org/10.5281/zenodo.3239098)
 
-The MDT is an adaptive test of pitch imagery abilities.
+The aPIAT is an adaptive test of pitch imagery abilities.
 We invite you to try the test [here](http://shiny.pmcharrison.com/piat-demo).
 
 ## Citation
 
-We are currently preparing an introductory publication for the PIAT.
-In the meanwhile, when using the PIAT in your own research, you can cite this implementation:
+We have submitted for publication a paper that details the validation of the aPIAT, 
+and have posted a copy to the preprint server, PsyArXiv.
+While it remains under peer review, when using the aPIAT in your own research, you can cite this:
 
-> Harrison, P. M. C. (2018). 
-Pitch Imagery Ability Test (PIAT), psychTestR implementation. Zenodo.
-https://doi.org/10.5281/zenodo.3239098
+Gelding, R., Harrison, P. M. C., Silas, S., Johnson, B. W., Thompson, W. F., & Müllensiefen, D. (2019). Developing an efficient test of musical imagery ability: Applying modern psychometric techniques to the Pitch Imagery Arrow Task. https://doi.org/10.31234/osf.io/8gvhz
 
 We also advise mentioning the software versions you used,
 in particular the versions of the `piat`, `psychTestR`, and `psychTestRCAT` packages.
