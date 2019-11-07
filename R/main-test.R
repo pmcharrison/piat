@@ -1,11 +1,11 @@
-main_test <- function(label, media_dir, num_items) {
-  psychTestRCAT::adapt_test(
+main_test <- function(label, media_dir, num_items, dict) {
+  psychTestR::new_timeline(psychTestRCAT::adapt_test(
     label = label,
     item_bank = get_item_bank(),
     show_item = show_item(media_dir),
     stopping_rule = psychTestRCAT::stopping_rule.num_items(n = num_items),
     opt = piat.options()
-  )
+  ), dict = dict)
 }
 
 show_item <- function(media_dir) {
@@ -68,12 +68,14 @@ get_item_path <- function(item, media_dir) {
 get_prompt <- function(item_number, num_items_in_test) {
   shiny::div(
     shiny::p(
-      "Question ",
-      shiny::strong(item_number),
-      " out of ",
-      shiny::strong(if (is.null(num_items_in_test)) "?" else num_items_in_test)),
+      psychTestR::i18n(
+        "PIAT_017",
+        sub = c(
+          item_number = item_number,
+          num_items_in_test = if (is.null(num_items_in_test)) "?" else num_items_in_test
+        ))),
     shiny::p(
-      "Did the final tone match the note you were imagining?"
+      psychTestR::i18n("PIAT_013")
     ))
 }
 

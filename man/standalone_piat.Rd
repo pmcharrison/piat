@@ -6,7 +6,8 @@
 \usage{
 standalone_piat(title = "Pitch imagery ability test",
   admin_password = "replace-with-secure-password",
-  researcher_email = NULL, ...)
+  researcher_email = NULL, languages = piat_languages(),
+  dict = piat::piat_dict, ...)
 }
 \arguments{
 \item{title}{(Scalar character) Title to display during testing.}
@@ -16,6 +17,12 @@ standalone_piat(title = "Pitch imagery ability test",
 \item{researcher_email}{(Scalar character)
 If not \code{NULL}, this researcher's email address is displayed
 at the bottom of the screen so that online participants can ask for help.}
+
+\item{languages}{(Character vector)
+Determines the languages available to participants.
+Possible languages include English (\code{"EN"}) and German (\code{"DE"}).}
+
+\item{dict}{The psychTestR dictionary used for internationalisation.}
 
 \item{...}{Further arguments to be passed to \code{\link{piat}()}.}
 }
