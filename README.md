@@ -85,6 +85,18 @@ and downloading your data.
 For more details on the psychTestR interface, 
 see http://psychtestr.com/.
 
+The PIAT uses video files that are currently stored on our media servers.
+As a result, it requires an internet connection to function properly.
+
+The PIAT currently supports English (EN) and German (DE).
+If you would like to add a new language to this list, please contact us.
+You can select one of these languages by passing a language code as 
+an argument to `standalone_piat()`, e.g. `standalone_piat(languages = "DE")`,
+or alternatively by passing it as a URL parameter to the test browser,
+eg. http://127.0.0.1:4412/?language=DE (note that the `p_id` argument must be empty).
+Please note that the demo version of the test (`demo_piat`)
+currently only supports English.
+
 ### Results
 
 The main output from the PIAT is an `ability` score,
@@ -152,9 +164,3 @@ where `shiny` is the username for the Shiny process user
 
 7. Navigate to your new shiny app, with a URL that looks like this:
 http://my-web-page.org:3838/piat
-
-## Usage notes
-
-- The PIAT runs in your web browser.
-- By default, audio files are hosted online on our servers.
-The test therefore requires internet connectivity.

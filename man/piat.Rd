@@ -5,8 +5,9 @@
 \title{PIAT}
 \usage{
 piat(num_items = 25L, take_training = TRUE, label = "PIAT",
-  feedback = piat.feedback.no_score(),
-  media_dir = "http://media.gold-msi.org/test_materials/PIAT/1-0-1/mp4")
+  feedback = piat.feedback.no_score(dict = dict),
+  media_dir = "http://media.gold-msi.org/test_materials/PIAT/1-0-1/mp4",
+  dict = piat::piat_dict)
 }
 \arguments{
 \item{num_items}{(Integer scalar) Number of items in the test.}
@@ -20,6 +21,8 @@ at the end of the test. By default no feedback is given.}
 
 \item{media_dir}{(Character scalar) File path to the directory
 hosting the test's media files (typically a publicly accessible web directory).}
+
+\item{dict}{The psychTestR dictionary used for internationalisation.}
 }
 \description{
 This function defines an pitch imagery ability test (PIAT)

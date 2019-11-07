@@ -4,7 +4,10 @@
 \alias{piat.feedback.simple_score}
 \title{PIAT feedback (simple score)}
 \usage{
-piat.feedback.simple_score()
+piat.feedback.simple_score(dict = piat::piat_dict)
+}
+\arguments{
+\item{dict}{The psychTestR dictionary used for internationalisation.}
 }
 \description{
 Here the participant's score is reported at the end of the test.

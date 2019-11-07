@@ -16,21 +16,22 @@
 #' at the end of the test. By default no feedback is given.
 #' @param media_dir (Character scalar) File path to the directory
 #' hosting the test's media files (typically a publicly accessible web directory).
+#' @param dict The psychTestR dictionary used for internationalisation.
 #'
 #' @export
 piat <- function(num_items = 25L,
                  take_training = TRUE,
                  label = "PIAT",
-                 feedback = piat.feedback.no_score(),
-                 media_dir = "http://media.gold-msi.org/test_materials/PIAT/1-0-1/mp4") {
+                 feedback = piat.feedback.no_score(dict = dict),
+                 media_dir = "http://media.gold-msi.org/test_materials/PIAT/1-0-1/mp4",
+                 dict = piat::piat_dict) {
   stopifnot(is.scalar.character(label), is.scalar.numeric(num_items),
-            is.scalar.logical(take_training), is.scalar.character(media_dir),
-            is.null(feedback) || is(feedback, "test_element") || is.list(feedback))
+            is.scalar.logical(take_training), is.scalar.character(media_dir))
   media_dir <- gsub("/$", "", media_dir)
 
-  c(
-    if (take_training) training(media_dir, num_items),
-    main_test(label, media_dir, num_items),
+  psychTestR::join(
+    if (take_training) training(media_dir, num_items, dict),
+    main_test(label, media_dir, num_items, dict),
     feedback
   )
 }
