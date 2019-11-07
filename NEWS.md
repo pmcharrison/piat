@@ -1,3 +1,5 @@
+# piat 0.3.0
+
 * Added German support.
 
 # piat 0.2.0
