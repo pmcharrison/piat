@@ -80,5 +80,7 @@ get_prompt <- function(item_number, num_items_in_test) {
 }
 
 get_choices <- function() {
-  c(`Match` = "1", `No match` = "0")
+  setNames(c("1", "0"),
+           c(psychTestR::i18n("PIAT_020"),
+             psychTestR::i18n("PIAT_021")))
 }
