@@ -25,6 +25,7 @@ PIAT_022,Yes,Ja
 PIAT_023,No,Nein
 PIAT_024,Next,Weiter
 PIAT_025,You answered incorrectly.,Du hast falsch geantwortet.
+PIAT_026,Pitch Imagery Arrow Test,Ton-Vorstellungs-Test
 "enter_p_id","Please enter your participant ID.","Bitte gib Deine Teilnehmer-ID ein."
 "results_have_been_saved","Your results have been saved.","Deine Ergebnisse sind gespeichert."
 "you_may_close_browser","You may now close the browser window.","Du kannst dieses Fenster jetzt schließen."
