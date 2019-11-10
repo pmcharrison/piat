@@ -1,3 +1,5 @@
+* Fixed mismatch between German instructions and English videos.
+
 # piat 0.3.1
 
 * Added German translation of Pitch Imagery Arrow Test to dictionary.
