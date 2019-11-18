@@ -19,9 +19,8 @@ demo_piat <- function(num_items = 10L,
                       admin_password = "demo",
                       researcher_email = NULL,
                       ...) {
-  elts <- c(
-    psychTestR::one_button_page("Welcome to the PIAT demo!",
-                                button_text = psychTestR::i18n("PIAT_024")),
+  elts <- psychTestR::join(
+    psychTestR::one_button_page("Welcome to the PIAT demo!"),
     piat::piat(num_items = num_items,
                take_training = take_training,
                feedback = feedback,

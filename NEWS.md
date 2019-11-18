@@ -1,3 +1,5 @@
+* Switched media from HTTP to HTTPS.
+
 # piat 0.3.2
 
 * Fixed mismatch between German instructions and English videos.
