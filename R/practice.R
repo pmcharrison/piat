@@ -1,11 +1,11 @@
 practice <- function(media_dir) {
   unlist(lapply(
     list(list(id = "Prac_Trial_Lvl1",
-              answer = "Match"),
+              answer = "match"),
          list(id = "Prac_Trial_Lvl2",
-              answer = "No match"),
+              answer = "no_match"),
          list(id = "Prac_Trial_Lvl3",
-              answer = "Match")
+              answer = "match")
     ),
     function(x) {
       list(
@@ -13,7 +13,7 @@ practice <- function(media_dir) {
           label = "practice_question",
           prompt = psychTestR::i18n("PIAT_013"),
           url = file.path(media_dir, paste0(x$id, ".mp4")),
-          choices = c("Match", "No match"),
+          choices = c("match", "no_match"),
           labels = c(psychTestR::i18n("PIAT_020"),
                      psychTestR::i18n("PIAT_021"))
         ),
