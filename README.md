@@ -7,11 +7,9 @@ We invite you to try the test [here](http://shiny.pmcharrison.com/piat-demo).
 
 ## Citation
 
-We have submitted for publication a paper that details the validation of the aPIAT, 
-and have posted a copy to the preprint server, PsyArXiv.
-While it remains under peer review, when using the aPIAT in your own research, you can cite this:
+You can cite the aPIAT as follows:
 
-Gelding, R., Harrison, P. M. C., Silas, S., Johnson, B. W., Thompson, W. F., & Müllensiefen, D. (2019). Developing an efficient test of musical imagery ability: Applying modern psychometric techniques to the Pitch Imagery Arrow Task. https://doi.org/10.31234/osf.io/8gvhz
+Gelding, R., Harrison, P. M. C., Silas, S., Johnson, B. W., Thompson, W. F., and Müllensiefen, D., 2020. Developing an efficient test of musical imagery ability: Applying modern psychometric techniques to the Pitch Imagery Arrow Task. *Psychological Research*. https://doi.org/10.1007/s00426-020-01322-3
 
 We also advise mentioning the software versions you used,
 in particular the versions of the `piat`, `psychTestR`, and `psychTestRCAT` packages.
@@ -25,6 +23,13 @@ if (!require(devtools)) install.packages("devtools")
 x <- devtools::session_info()
 x$packages[x$packages$package %in% c("piat", "psychTestR", "psychTestRCAT"), ]
 ```
+
+You can cite psychTestR as follows:
+
+> Harrison, Peter M. C. (2020).
+> psychTestR: An R package for designing and
+> conducting behavioural psychological experiments.
+> *Journal of Open Source Software*. https://doi.org/10.21105/joss.02088
 
 ## Installation instructions (local use)
 
