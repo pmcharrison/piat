@@ -1,3 +1,5 @@
+# piat 0.3.4
+
 * Removed whitespace from HTML button IDs.
 
 # piat 0.3.3
