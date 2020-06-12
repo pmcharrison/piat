@@ -38,8 +38,9 @@ intro <- function(media_dir) {
     psychTestR::video_NAFC_page(
       label = "example_complete_trial",
       prompt = psychTestR::i18n("PIAT_010"),
-      choices = c(psychTestR::i18n("PIAT_020"),
-                  psychTestR::i18n("PIAT_021")),
+      choices = c("match", "no_match"),
+      labels = c(psychTestR::i18n("PIAT_020"),
+                 psychTestR::i18n("PIAT_021")),
       url = file.path(media_dir, "Example_Trial_complete.mp4")
     ),
     psychTestR::one_button_page(psychTestR::i18n("PIAT_011"),
