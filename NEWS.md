@@ -1,3 +1,5 @@
+* Removed whitespace from HTML button IDs.
+
 # piat 0.3.3
 
 * Switched media from HTTP to HTTPS.
