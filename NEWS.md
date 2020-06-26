@@ -1,3 +1,5 @@
+# piat 0.3.5
+
 * Fixed formatting bug in results output.
 
 # piat 0.3.4
