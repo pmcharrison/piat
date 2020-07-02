@@ -2,7 +2,7 @@
 library(psychTestR)
 library(testthat)
 
-dir <- "C:/Users/viola/Documents/LongGold/Projects/PIAT/inst/PIAT"
+dir <- system.file("", package = "piat", mustWork = TRUE)
 
 number_items <- 20 #number of items
 
@@ -39,7 +39,7 @@ app$expect_ui_text("To test the accuracy of your imagery, a test tone will be so
 app$click_next()
 
 app$expect_ui_text("Here is an example complete trial: Click here to play Match No match")
-app$click("Match")
+app$click("match")
 
 app$expect_ui_text("We encourage you to just use your imagery to play the missing notes in your head, and don’t hum or move as you imagine. From earlier tests we know that using only your imagery gives the best results on the test. Next")
 app$click_next()
@@ -48,19 +48,19 @@ app$expect_ui_text("There are 3 practice trials in which you will receive feedba
 app$click_next()
 
 app$expect_ui_text(paste("Did the final tone match the note you were imagining? Click here to play Match No match"))
-app$click("Match")
+app$click("match")
 
 app$expect_ui_text("You answered correctly! Next")
 app$click_next()
 
 app$expect_ui_text(paste("Did the final tone match the note you were imagining? Click here to play Match No match"))
-app$click("Match")
+app$click("match")
 
 app$expect_ui_text("You answered incorrectly. Next")
 app$click_next()
 
 app$expect_ui_text(paste("Did the final tone match the note you were imagining? Click here to play Match No match"))
-app$click("No match") # ??? "No match" throws an error.
+app$click("no_match") # ??? "No match" throws an error.
 
 app$expect_ui_text("You answered incorrectly. Next")
 app$click_next()
@@ -78,7 +78,7 @@ for (i in sample(0:1, number_items, replace=TRUE)){
   app$click(i) #0 = No match
   print(paste0("answer", i))
   q <- q + 1
-  }
+}
 
 app$expect_ui_text("You finished the test! Next")
 app$click_next()
@@ -91,4 +91,3 @@ PIAT_ability[j] <<- results[["PIAT"]][["ability"]]
 
 print(paste("Standard error of measurement of PIAT", PIAT_SEM[j]))
 app$stop()
-
