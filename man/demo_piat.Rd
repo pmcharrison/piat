@@ -4,9 +4,14 @@
 \alias{demo_piat}
 \title{Demo PIAT}
 \usage{
-demo_piat(num_items = 10L, take_training = TRUE,
+demo_piat(
+  num_items = 10L,
+  take_training = TRUE,
   feedback = psychTestRCAT::cat.feedback.graph("PIAT"),
-  admin_password = "demo", researcher_email = NULL, ...)
+  admin_password = "demo",
+  researcher_email = NULL,
+  ...
+)
 }
 \arguments{
 \item{num_items}{(Integer scalar) Number of items in the test.}

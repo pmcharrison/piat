@@ -14,5 +14,7 @@ Imports:
     plyr (>= 1.8.4),
     shiny (>= 1.4.0),
     methods
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
 Remotes: pmcharrison/psychTestRCAT, pmcharrison/psychTestR
+Suggests: 
+    testthat
