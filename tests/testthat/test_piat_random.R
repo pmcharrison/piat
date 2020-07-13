@@ -76,18 +76,21 @@ q <- 1 # Number of question
 for (i in sample(0:1, number_items, replace=TRUE)){
   app$expect_ui_text(paste("Question", q, "out of", number_items, "Did the final tone match the note you were imagining? Click here to play Match No match"))
   app$click(i) #0 = No match
-  print(paste0("answer", i))
+  if (interactive()) print(paste0("answer", i))
   q <- q + 1
 }
 
 app$expect_ui_text("You finished the test! Next")
 app$click_next()
 
-# Results
-results <- app$get_results() %>% as.list()
-print(j)
-PIAT_SEM[j] <<- results[["PIAT"]][["ability_sem"]]
-PIAT_ability[j] <<- results[["PIAT"]][["ability"]]
+if (FALSE) {
+  # Results
+  results <- app$get_results() %>% as.list()
+  print(j)
+  PIAT_SEM[j] <<- results[["PIAT"]][["ability_sem"]]
+  PIAT_ability[j] <<- results[["PIAT"]][["ability"]]
 
-print(paste("Standard error of measurement of PIAT", PIAT_SEM[j]))
+  print(paste("Standard error of measurement of PIAT", PIAT_SEM[j]))
+}
+
 app$stop()
