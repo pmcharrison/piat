@@ -78,7 +78,7 @@ for (i in sample(0:1, number_items, replace=TRUE)){
   app$click(i) #0 = No match
   print(paste0("answer", i))
   q <- q + 1
-  }
+}
 
 app$expect_ui_text("You finished the test! Next")
 app$click_next()
