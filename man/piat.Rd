@@ -4,10 +4,14 @@
 \alias{piat}
 \title{PIAT}
 \usage{
-piat(num_items = 25L, take_training = TRUE, label = "PIAT",
+piat(
+  num_items = 25L,
+  take_training = TRUE,
+  label = "PIAT",
   feedback = piat.feedback.no_score(dict = dict),
-  media_dir = "http://media.gold-msi.org/test_materials/PIAT/1-0-1/mp4",
-  dict = piat::piat_dict)
+  media_dir = "https://media.gold-msi.org/test_materials/PIAT/1-0-1/mp4",
+  dict = piat::piat_dict
+)
 }
 \arguments{
 \item{num_items}{(Integer scalar) Number of items in the test.}
