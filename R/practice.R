@@ -15,7 +15,8 @@ practice <- function(media_dir) {
           url = file.path(media_dir, paste0(x$id, ".mp4")),
           choices = c("match", "no_match"),
           labels = c(psychTestR::i18n("PIAT_020"),
-                     psychTestR::i18n("PIAT_021"))
+                     psychTestR::i18n("PIAT_021")),
+          save_answer = FALSE
         ),
         psychTestR::reactive_page(function(answer, ...) {
           psychTestR::one_button_page(

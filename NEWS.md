@@ -1,3 +1,11 @@
+# piat 0.3.5
+
+* Fixed formatting bug in results output.
+
+# piat 0.3.4
+
+* Removed whitespace from HTML button IDs.
+
 # piat 0.3.3
 
 * Switched media from HTTP to HTTPS.

@@ -41,7 +41,8 @@ intro <- function(media_dir) {
       choices = c("match", "no_match"),
       labels = c(psychTestR::i18n("PIAT_020"),
                  psychTestR::i18n("PIAT_021")),
-      url = file.path(media_dir, "Example_Trial_complete.mp4")
+      url = file.path(media_dir, "Example_Trial_complete.mp4"),
+      save_answer = FALSE
     ),
     psychTestR::one_button_page(psychTestR::i18n("PIAT_011"),
                                 button_text = psychTestR::i18n("PIAT_024")),
