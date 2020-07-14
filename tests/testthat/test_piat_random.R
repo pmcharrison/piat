@@ -60,7 +60,7 @@ app$expect_ui_text("You answered incorrectly. Next")
 app$click_next()
 
 app$expect_ui_text(paste("Did the final tone match the note you were imagining? Click here to play Match No match"))
-app$click("no_match") # ??? "No match" throws an error.
+app$click("no_match") 
 
 app$expect_ui_text("You answered incorrectly. Next")
 app$click_next()
@@ -86,11 +86,11 @@ app$click_next()
 if (FALSE) {
   # Results
   results <- app$get_results() %>% as.list()
-  print(j)
-  PIAT_SEM[j] <<- results[["PIAT"]][["ability_sem"]]
-  PIAT_ability[j] <<- results[["PIAT"]][["ability"]]
+  PIAT_ability_sem <<- results[["PIAT"]][["ability_sem"]]
+  PIAT_ability <<- results[["PIAT"]][["ability"]]
 
-  print(paste("Standard error of measurement of PIAT", PIAT_SEM[j]))
+
+  print(paste("Standard error of measurement of PIAT", PIAT_ability_sem))
 }
 
 app$stop()
