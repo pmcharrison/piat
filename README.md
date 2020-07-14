@@ -1,6 +1,7 @@
 # Adaptive Pitch Imagery Arrow Test (aPIAT)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3239098.svg)](https://doi.org/10.5281/zenodo.3239098)
+[![Travis build status](https://travis-ci.com/pmcharrison/piat.svg?branch=master)](https://travis-ci.com/pmcharrison/piat)
 
 The aPIAT is an adaptive test of pitch imagery abilities.
 We invite you to try the test [here](http://shiny.pmcharrison.com/piat-demo).

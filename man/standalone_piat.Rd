@@ -4,10 +4,14 @@
 \alias{standalone_piat}
 \title{Standalone PIAT}
 \usage{
-standalone_piat(title = "Pitch imagery ability test",
+standalone_piat(
+  title = "Pitch imagery ability test",
   admin_password = "replace-with-secure-password",
-  researcher_email = NULL, languages = piat_languages(),
-  dict = piat::piat_dict, ...)
+  researcher_email = NULL,
+  languages = piat_languages(),
+  dict = piat::piat_dict,
+  ...
+)
 }
 \arguments{
 \item{title}{(Scalar character) Title to display during testing.}
