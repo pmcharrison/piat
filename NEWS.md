@@ -1,3 +1,5 @@
+* Updated `compile_trial_by_trial_results` documentation.
+
 # piat 0.3.5
 
 * Fixed formatting bug in results output.
