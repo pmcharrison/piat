@@ -1,4 +1,4 @@
-input <- read.csv("data-raw/piat-dict.csv", stringsAsFactors = FALSE)
+input <- read.csv("data-raw/piat-dict.csv", stringsAsFactors = FALSE, encoding = "utf-8")
 
 # names(input)[[1]] <- "key"
 
