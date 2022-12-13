@@ -1,3 +1,5 @@
+# piat 0.4.0
+
 * Added Turkish support (thanks Merve Yaşar!).
 
 # piat 0.3.6
