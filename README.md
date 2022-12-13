@@ -94,7 +94,7 @@ see http://psychtestr.com/.
 The PIAT uses video files that are currently stored on our media servers.
 As a result, it requires an internet connection to function properly.
 
-The PIAT currently supports English (EN) and German (DE).
+The PIAT currently supports English (EN), German (DE), and Turkish (TR).
 If you would like to add a new language to this list, please contact us.
 You can select one of these languages by passing a language code as 
 an argument to `standalone_piat()`, e.g. `standalone_piat(languages = "DE")`,

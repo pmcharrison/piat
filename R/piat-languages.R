@@ -3,5 +3,5 @@
 #' Lists the languages available for PIAT implementations.
 #' @export
 piat_languages <- function() {
-  c("EN", "DE")
+  c("EN", "DE", "TR")
 }

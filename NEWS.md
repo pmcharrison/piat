@@ -1,3 +1,5 @@
+* Added Turkish support (thanks Merve Yaşar!).
+
 # piat 0.3.6
 
 * Updated `compile_trial_by_trial_results` documentation.
