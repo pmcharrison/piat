@@ -1,3 +1,5 @@
+# piat 0.5.0
+
 * Added Latvian support.
 
 # piat 0.4.1
