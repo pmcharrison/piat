@@ -1,3 +1,5 @@
+* Added Italian support (thanks Frego Giorgio!).
+
 # piat 0.5.0
 
 * Added Latvian support.
