@@ -1,3 +1,5 @@
+# piat 0.6.0
+
 * Added Italian support (thanks Frego Giorgio!).
 
 # piat 0.5.0
